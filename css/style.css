@@ -1,0 +1,417 @@
+/*      style.css      */
+/*   ITW - 2.projekt   */
+/*   Phamova Thu Tra   */
+/*      xphamo00       */
+/*    FIT VUT 2024     */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Copperplate, Verdana , Arial, sans-serif;
+    font-size: 16px;
+}
+
+header, nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    text-align: center;
+}
+
+header {   
+    height: 60vh;
+    color: #AA3939;
+    font-size: 1.5em;
+    
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    transition: font-size 0.9s;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header a {
+    text-decoration: none;
+    color: #AA3939;
+}
+
+header .head:first-child {
+    margin-left: 100px;
+}
+
+header img {
+    width: 180px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 100px;
+    transition: width 1s;
+    animation: float 5s ease-in-out infinite;
+}
+
+header .icons {
+    margin-top: 5px;
+    font-size: 1.3em;
+    transition: font-size 0.3s;
+}
+
+header .icons i {
+    margin: 5px;
+    color: #AA3939;
+    transition: color 0.3s;
+}
+
+header .icons i:hover {
+    color: #ee7b7b;
+}
+
+nav {
+    position: fixed;
+    height: 40px;
+    top: 0;
+    z-index: 1;
+    gap: 20px;
+
+    background-color: #D46A6A;    
+    text-transform: uppercase;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s, font-size 0.5s;
+}
+
+nav a:hover {
+    color: #550000;
+}
+
+/* for mobile view */
+.mobile-nav {
+    display: none;
+}
+
+section {
+    padding-top: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.content {
+    margin-left: 40px;
+    transition: margin-left 0.6s;
+}
+
+section h2 {
+    color: #550000;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#education .school,
+.skill,
+.interest,
+.interest img {
+    border-radius: 10px;
+}
+
+#education {
+    color: #550000;
+}
+
+#education .school {
+    background-color: #FFAAAA;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.5s, background-color 0.5s, color 0.9s;
+}
+
+#education .school:last-child {
+    margin: 0;
+}
+
+#education .school:nth-child(even) {
+    background-color: #D46A6A;
+}
+
+#education .school:hover {
+    background-color: #AA4139;
+    transform: scale(1.04);
+}
+
+#education .school:hover h3{
+    color: white;
+}
+
+#education .school:hover p {
+    color: #FFAAAA;
+}
+
+#skills .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #550000;
+    
+    padding: 20px;
+    border: 5px solid #801515;
+    opacity: 0.65;
+    transition: transform 0.5s, border 0.5s, opacity 0.5s;
+}
+
+.skill:hover {
+    opacity: 1;
+    border-color: #801515c8;
+    transform: scale(1.06);
+}
+
+.skill i {
+    font-size: 4em;
+    margin-bottom: 10px;
+    transition: font-size 0.5s, color 0.5s;
+}
+
+#interests .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    text-align: center;
+    background-color: #fdb5b5;
+    transition: background-color 0.4s, transform 0.5s;
+}
+
+.interest:hover {
+    background-color: #e88383;
+    transform: scale(1.05);
+}
+
+.interest img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    
+    margin-bottom: 10px;
+    border: 1px solid rgb(128, 21, 21, 0.2);
+}
+
+.interest h3,
+.interest p {
+    color: #550000;
+}
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    border-radius: 20px;
+    border-top: 3px solid #AA3939;
+    text-align: center;
+}
+
+#contact .content {
+    margin: 0;
+}
+
+#contact p {
+    color: #801515;
+}
+
+/* tablet view */
+/* only logic here is to make content's size smaller */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 1em;
+    }
+
+    header div:first-child {
+        margin-left: 60px;
+    }
+    
+    header img {
+        width: 150px;
+        margin-right: 60px;
+    }
+
+    .main-nav a {
+        font-size: 0.8em;
+    }
+
+    section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    #skills .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill i {
+        font-size: 3em;
+    }
+
+    #interests .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* mobile view */
+@media only screen and (max-width: 500px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    
+    header .head:first-child {
+        margin: 0;
+    }
+    
+    header img {
+        margin: 20px;
+    }
+
+    header .head {
+        font-size: 1.4em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* hides navigation bar */
+    .main-nav a {
+        display: none;
+    }
+    /* shows different navigation bar */
+    .mobile-nav {
+        display: flex;
+    }
+
+    /* menu button view */
+    .nav-menu {
+        display: block;
+        background: none;
+        border: none;
+        
+        cursor: pointer;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    /* hidden, menu is closed */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        
+        background-color: #fbdfdf;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        border-radius: 20px;
+        
+        text-decoration: none;
+        color: #D46A6A;
+        font-size: 0.8em;
+        transition: background-color 0.7s, color 0.7s;
+    }
+
+    .nav-links a:hover {
+        color: #801515;
+        background-color: #e88383;
+    }
+
+    /* shows items, menu is opened */
+    .nav-links.active {
+        display: block;
+    }
+    
+    .icons {
+        margin-top: 3px;
+        font-size: 1.1em;
+    }
+    
+    .icons i {
+        margin: 3px;
+    }
+
+    section {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    section h2 {
+        text-align: center;
+    }
+
+    #skills .content {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .skill {
+        padding: 10px;
+    }
+
+    .skill i {
+        font-size: 2em;
+    }
+
+    #interests .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* animation for header image */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
